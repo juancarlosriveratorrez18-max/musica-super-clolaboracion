@@ -3,14 +3,69 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CONTACTENOS</title>
+    <title>Contacto - Music Studio</title>
+   <link rel="stylesheet" href="css/contacto.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-    <h1>CONTACTENOS</h1>
-    <p>Si deseas ponerte en contacto con nosotros, puedes hacerlo a través de los siguientes medios:</p>
-    <ul>
-        <li>Correo electrónico:yonandersonmarroquin13@gamil.com</li>
-        <li>Teléfono: 314 8735751</li>
-    </ul>
+
+    <nav>
+        <div class="logo"><i class="fas fa-compact-disc"></i> MUSIC</div>
+        <div class="nav-links">
+            <a href="#">Home</a>
+            <a href="#">Álbumes</a>
+            <a href="#">Galería</a>
+            <a href="#" class="btn-contacto">Contáctenos</a>
+        </div>
+    </nav>
+
+    <section class="contact-section">
+        <h2>Contáctenos</h2>
+        <div class="underline"></div>
+
+        <div class="flex-container">
+            <div class="info-card">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>456 Rock Avenue, Music City, NY 10101</span>
+                </div>
+                <div class="info-item">
+                <i class="fas fa-envelope"></i>
+                <div class="emails-group">
+                    <span>yonanderson@musicstudio.com</span><br>
+                    <span>juan@musicstudio.com</span>
+                </div>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>(555) 123-4567</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Lun - Vie: 10:00 AM - 10:00 PM</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <span>Sábados: 12:00 PM - 8:00 PM</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-microphone-alt"></i>
+                    <span>Domingos: Sesiones Privadas</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-globe"></i>
+                    <span>www.musicsite.com</span>
+                </div>
+            </div>
+
+            <form class="contact-form">
+                <input type="text" placeholder="TU NOMBRE" required>
+                <input type="email" placeholder="TU GMAIL" required>
+                <textarea placeholder="DEJA UN MENSAJE PARA LA BANDA..."></textarea>
+                <button type="submit" class="btn-submit">Enviar</button>
+            </form>
+        </div>
+    </section>
+
 </body>
 </html>
