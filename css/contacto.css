@@ -1,151 +1,178 @@
-/* Estilos Generales con fondo degradado */
-body {
+/* 1. RESET Y CONFIGURACIÓN GLOBAL */
+* {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    /* Fondo con un destello azul superior para profundidad */
-    background: radial-gradient(circle at top, #0a192f 0%, #121212 50%);
-    background-color: #121212;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    min-height: 100vh;
 }
 
-/* Navbar - Sin líneas, con degradado suave */
-nav {
-    width: 100%;
-    background: linear-gradient(to bottom, rgba(10, 25, 47, 0.9), transparent);
-    padding: 20px 50px;
+body {
+    background-color: #121212; 
+    color: #fff;
+    line-height: 1.6;
+}
+
+/* 2. NUEVO ENCABEZADO (ESTILO SPOTIFY) */
+/* Ponlo aquí para que controle la parte superior de la página */
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-sizing: border-box;
-    position: absolute; /* Para que flote sobre el degradado */
+    padding: 10px 40px;
+    background-color: #000000;
+    font-family: 'Circular', sans-serif; 
 }
 
-.logo { font-weight: bold; font-size: 1.5rem; color: #fff; letter-spacing: 1px; }
-.nav-links a { color: #ccc; text-decoration: none; margin: 0 15px; font-weight: 400; font-size: 0.9rem; }
-
-.btn-contacto { 
-    background-color: #007bff; 
-    padding: 8px 25px; 
-    border-radius: 50px; 
-    color: white;
+.nav-left .nav-logo {
+    display: flex;
+    align-items: center;
     text-decoration: none;
+    gap: 10px;
+}
+
+.logo-img {
+    width: 32px; 
+}
+
+.nav-text {
+    color: white;
+    font-size: 1.2rem;
     font-weight: bold;
-    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
 }
 
-/* Contenedor Principal */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.1); 
+    padding: 8px 20px;
+    border-radius: 30px;
+}
+
+.nav-link {
+    text-decoration: none;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    font-weight: bold;
+    padding: 5px 10px;
+    transition: 0.3s;
+}
+
+.nav-link:hover {
+    color: white;
+}
+
+.nav-link.active {
+    color: white;
+    background-color: #333; 
+    border-radius: 15px;
+}
+
+.btn-login {
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    transition: 0.3s;
+}
+
+.btn-login:hover {
+    transform: scale(1.05);
+}
+
+/* 3. SECCIÓN DE CONTACTO (TU CÓDIGO ORIGINAL) */
 .contact-section {
-    margin-top: 120px; /* Espacio para el nav absoluto */
-    padding: 50px 20px;
+    padding: 60px 10%;
     text-align: center;
-    max-width: 1100px;
 }
 
-h2 {
+.contact-section h2 {
     font-size: 2.5rem;
     text-transform: uppercase;
-    margin-bottom: 30px;
-    letter-spacing: 4px;
-    /* Resplandor suave detrás del texto */
-    text-shadow: 0 0 20px rgba(0, 123, 255, 0.5);
 }
 
-/* Eliminamos la clase .underline anterior y la reemplazamos por nada o un brillo */
-.underline { display: none; } 
+.underline {
+    width: 60px;
+    height: 4px;
+    background: #3498db; /* Cambiado a azul para combinar con tus ajustes previos */
+    margin: 10px auto 40px;
+}
 
 .flex-container {
     display: flex;
-    gap: 30px;
     flex-wrap: wrap;
+    gap: 40px;
     justify-content: center;
     align-items: flex-start;
 }
 
-/* Tarjeta de Información - Estilo Moderno */
 .info-card {
-    background-color: rgba(17, 34, 64, 0.7); /* Azul translúcido */
-    backdrop-filter: blur(10px); /* Efecto cristal */
-    padding: 40px;
-    border-radius: 20px;
+    flex: 1;
+    min-width: 300px;
+    background: #1e1e1e;
+    padding: 30px;
+    border-radius: 10px;
     text-align: left;
-    width: 380px;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 .info-item {
     display: flex;
     align-items: center;
-    margin-bottom: 22px;
-    font-size: 0.85rem;
-    color: #cbd5e0;
+    margin-bottom: 20px;
 }
 
 .info-item i {
-    color: #64ffda; /* Color de acento para iconos */
+    color: #3498db; /* Azul */
+    font-size: 1.2rem;
     margin-right: 15px;
-    font-size: 1.1rem;
+    width: 25px;
 }
 
-/* Formulario - Inputs más integrados */
+/* Formulario */
 .contact-form {
+    flex: 1;
+    min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 15px;
-    width: 450px;
 }
 
-input, textarea {
-    background-color: rgba(29, 45, 80, 0.6);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    padding: 18px;
-    border-radius: 10px;
-    color: white;
-    font-size: 0.9rem;
+.contact-form input, 
+.contact-form textarea {
     width: 100%;
-    box-sizing: border-box;
+    padding: 15px;
+    background: #1e1e1e;
+    border: 1px solid #333;
+    color: white;
+    border-radius: 5px;
     outline: none;
 }
 
-input::placeholder, textarea::placeholder {
-    color: #718096;
-    text-transform: uppercase;
-    font-size: 0.8rem;
+.contact-form textarea {
+    height: 150px;
+    resize: none;
 }
 
-input:focus, textarea:focus {
-    border-color: #007bff;
-    background-color: rgba(29, 45, 80, 0.9);
+.contact-form input:focus, 
+.contact-form textarea:focus {
+    border-color: #3498db;
 }
 
 .btn-submit {
-    background-color: #007bff;
+    background: #3498db; /* Azul */
     color: white;
     border: none;
-    padding: 18px;
-    border-radius: 10px;
+    padding: 15px;
     font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: all 0.3s ease;
     text-transform: uppercase;
-    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
 }
 
 .btn-submit:hover {
-    background-color: #0056b3;
-    box-shadow: 0 5px 20px rgba(0, 123, 255, 0.4);
-    transform: translateY(-2px);
-}
-
-/* Responsive */
-@media (max-width: 768px) {
-    .flex-container { flex-direction: column; align-items: center; }
-    .info-card, .contact-form { width: 100%; }
-    nav { padding: 15px 20px; }
+    background: #2980b9;
 }
