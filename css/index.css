@@ -1,0 +1,220 @@
+/* --- Estilos Globales --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 5%;
+}
+
+/* --- NAVEGACIÓN --- */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    border-bottom: 1px solid #282828;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 0;
+}
+
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    text-decoration: none;
+}
+
+.nav-logo .logo-img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+.nav-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* ELIMINAR EL CUADRADO BLANCO */
+.menu-toggle {
+    display: none !important;
+    visibility: hidden;
+}
+
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 15px;
+}
+
+.nav-link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-login {
+    background-color: #ffffff;
+    color: #000000;
+    padding: 10px 25px;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.nav-login:hover { transform: scale(1.05); }
+
+/* --- Secciones --- */
+.artists-section { padding-top: 110px; margin-bottom: 40px; }
+.releases-section { padding: 30px 0 60px; }
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.section-title { font-size: 2rem; font-weight: 700; }
+.see-all-link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+.see-all-link:hover { text-decoration: underline; color: #fff; }
+
+/* Grids responsivos */
+.artists-grid, .lanzamientos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+/* --- EFECTOS HOVER RESTAURADOS --- */
+.artist-card, .card {
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* Efecto suave de fondo */
+    border-radius: 10px; /* Asegura bordes suaves para el hover */
+}
+
+.artist-card:hover, .card:hover {
+    background-color: #181818; /* Fondo gris oscuro al pasar el cursor */
+}
+
+/* --- Artistas (Circulares) --- */
+.artist-card { padding: 16px; text-align: center; }
+
+.artist-img-container {
+    width: 100%;
+    aspect-ratio: 1/1;
+    border-radius: 50%;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+}
+
+.artist-img { width: 100%; height: 100%; object-fit: cover; }
+.artist-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
+.artist-label { color: #b3b3b3; font-size: 0.85rem; }
+
+/* --- Lanzamientos (Cuadrados) --- */
+.card { padding: 16px; }
+
+.card-img {
+    width: 115%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 40px rgba(0, 0, 0, 0.3);
+}
+
+.card h4 { font-size: 1rem; font-weight: 800; margin-bottom: 4px; }
+.card p { color: #b3b3b3; font-size: 0.85rem; }
+
+/* --- PIE DE PÁGINA CENTRADO --- */
+.main-footer {
+    background-color: #000;
+    padding: 60px 0 20px;
+    border-top: 1px solid #282828;
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 { margin-bottom: 15px; font-size: 0.9rem; }
+.footer-section ul { list-style: none; }
+.footer-section a { color: #b3b3b3; text-decoration: none; font-size: 0.85rem; }
+.social-icons { display: flex; gap: 15px; }
+.social-icons a { color: #b3b3b3; font-size: 1.2rem; }
+
+/* CENTRADO DE LA LÍNEA FINAL SIN CUADROS */
+.footer-bottom {
+    border-top: 1px solid #282828;
+    padding-top: 20px;
+    display: flex;
+    justify-content: center; /* Centra el contenido horizontalmente */
+    align-items: center;
+    width: 100%;
+}
+
+.footer-bottom p {
+    color: #727272;
+    font-size: 0.8rem;
+    text-align: center; /* Centra el texto */
+    margin: 0;
+}
+
+/* --- Responsive --- */
+.menu-toggle { display: none; }
+
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .footer-content { grid-template-columns: 1fr; text-align: center; }
+    .social-icons { justify-content: center; }
+}
