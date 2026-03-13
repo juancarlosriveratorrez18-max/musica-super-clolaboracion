@@ -9,25 +9,32 @@
 </head>
 <body>
 
-   <nav class="navbar">
-        <div class="nav-left">
+    <header>
+        <nav class="navbar">
             <a href="index.html" class="nav-logo">
                 <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_White.png" alt="Logo" class="logo-img">
                 <h2 class="nav-text">MUSICA</h2>
             </a>
-        </div>
-        
-        <ul class="nav-menu">
-            <li><a href="index.html" class="nav-link">Home</a></li>
-            <li><a href="generos.html" class="nav-link">Géneros</a></li>
-            <li><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-            <li><a href="contacto.html" class="nav-link active">Contacto</a></li>
-        </ul>
+            
+            <input type="checkbox" id="menu-toggle" class="menu-toggle">
+            
+            <ul class="nav-menu">
+                <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
+                <li class="nav-item"><a href="generos.html" class="nav-link">Géneros</a></li>
+                <li><a href="nosotros.html" class="nav-link">nosotros</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+            </ul>
 
-        <div class="nav-right">
-            <a href="login.html" class="btn-login">Iniciar sesión</a>
-        </div>
-    </nav>
+            <div class="nav-actions">
+                <a href="login.html" class="nav-login">Iniciar sesión</a>
+                <label for="menu-toggle" class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </label>
+            </div>
+        </nav>
+    </header>
 
     <section class="contact-section">
         <h2>Contáctenos</h2>

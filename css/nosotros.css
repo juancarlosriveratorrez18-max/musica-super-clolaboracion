@@ -147,10 +147,8 @@ main {
 .card-img {
     width: 100px;
     height: 100px;
-    position: absolute;
-    bottom: -10px;
-    right: -10px;
-    transform: rotate(25deg); /* Efecto inclinado de Spotify */
+    margin: 0 auto;
+    display: block;
     background-size: cover;
     background-position: center;
     box-shadow: 0 4px 10px rgba(0,0,0,0.3);
