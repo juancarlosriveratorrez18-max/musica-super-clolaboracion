@@ -14,26 +14,25 @@
                 <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_White.png" alt="Logo" class="logo-img">
                 <h2 class="nav-text">MUSICA</h2>
             </a>
-            
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            
-            <ul class="nav-menu">
+
+            <ul class="nav-menu" id="nav-menu">
                 <li class="nav-item"><a href="index.html" class="nav-link active">Home</a></li>
                 <li class="nav-item"><a href="generos.html" class="nav-link">Géneros</a></li>
-                <li><a href="nosotros.html" class="nav-link">nosotros</a></li>
-                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
+                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
 
             <div class="nav-actions">
                 <a href="login.html" class="nav-login">Iniciar sesión</a>
-                <label for="menu-toggle" class="hamburger">
+                <button class="hamburger" id="hamburger" aria-label="Abrir menú">
                     <span></span>
                     <span></span>
                     <span></span>
-                </label>
+                </button>
             </div>
         </nav>
     </header>
+
     <main>
         <section id="artistas-destacados" class="artists-section">
             <div class="container">
@@ -52,9 +51,9 @@
                     </div>
                     <div class="artist-card">
                         <div class="artist-img-container">
-                            <img src="https://impactolatino.com/wp-content/uploads/2024/12/Rauw-Alejandro-3-e1733520035334.jpg" alt="KAROL G" class="artist-img">
+                            <img src="https://impactolatino.com/wp-content/uploads/2024/12/Rauw-Alejandro-3-e1733520035334.jpg" alt="Rauw Alejandro" class="artist-img">
                         </div>
-                        <h4 class="artist-name">Rauw alejandro</h4>
+                        <h4 class="artist-name">Rauw Alejandro</h4>
                         <p class="artist-label">Artista</p>
                     </div>
                     <div class="artist-card">
@@ -148,5 +147,23 @@
             <p>© 2026 MUSICA | Proyecto Formativo SENA | Todos los derechos reservados.</p>
         </div>
     </footer>
+
+    <script>
+        const hamburger = document.getElementById('hamburger');
+        const navMenu = document.getElementById('nav-menu');
+
+        hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('open');
+        });
+
+        // Cerrar menú al hacer clic en un enlace
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('open');
+            });
+        });
+    </script>
 </body>
 </html>
