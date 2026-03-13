@@ -126,9 +126,10 @@ header {
 
 /* SECCIÓN DE CONTACTO */
 .contact-section {
-    padding: 60px 10%;
-    padding-top: 120px;
+    padding: 120px 5% 60px;
     text-align: center;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .contact-section h2 {
@@ -145,38 +146,41 @@ header {
 }
 
 .flex-container {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-    align-items: flex-start;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    text-align: left;
 }
 
 .info-card {
-    flex: 1;
-    min-width: 300px;
     background: #1e1e1e;
     padding: 30px;
-    border-radius: 10px;
-    text-align: left;
+    border-radius: 12px;
 }
 
 .info-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
+    gap: 14px;
     margin-bottom: 20px;
 }
 
 .info-item i {
     color: #ffffff;
-    font-size: 1.2rem;
-    margin-right: 15px;
-    width: 25px;
+    font-size: 1.1rem;
+    width: 22px;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.info-item span,
+.info-item .emails-group {
+    font-size: 0.9rem;
+    color: #b3b3b3;
+    line-height: 1.6;
 }
 
 .contact-form {
-    flex: 1;
-    min-width: 300px;
     display: flex;
     flex-direction: column;
     gap: 15px;
@@ -185,12 +189,14 @@ header {
 .contact-form input,
 .contact-form textarea {
     width: 100%;
-    padding: 15px;
+    padding: 14px 16px;
     background: #1e1e1e;
     border: 1px solid #333;
     color: white;
-    border-radius: 5px;
+    border-radius: 8px;
     outline: none;
+    font-size: 0.9rem;
+    transition: border-color 0.3s;
 }
 
 .contact-form textarea {
@@ -210,10 +216,12 @@ header {
     padding: 15px;
     font-weight: bold;
     font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
     text-transform: uppercase;
     cursor: pointer;
-    border-radius: 5px;
+    border-radius: 8px;
     transition: 0.3s;
+    letter-spacing: 1px;
 }
 
 .btn-submit:hover {
@@ -249,7 +257,31 @@ header {
         border-radius: 10px;
     }
 
+    .contact-section {
+        padding: 100px 5% 50px;
+    }
+
+    .contact-section h2 {
+        font-size: 1.8rem;
+    }
+
     .flex-container {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+}
+
+@media (max-width: 480px) {
+    .contact-section h2 {
+        font-size: 1.5rem;
+    }
+
+    .info-card {
+        padding: 20px;
+    }
+
+    .info-item span,
+    .info-item .emails-group {
+        font-size: 0.85rem;
     }
 }
