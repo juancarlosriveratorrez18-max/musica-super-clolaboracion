@@ -14,7 +14,7 @@ body {
     line-height: 1.6;
 }
 
-/* 2. HEADER Y NAVBAR */
+/*HEADER Y NAVBAR */
 header {
     background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
@@ -93,7 +93,7 @@ header {
     transform: scale(1.05);
 }
 
-/* 3. SECCIÓN DE CONTACTO */
+/*SECCIÓN DE CONTACTO */
 .contact-section {
     padding: 60px 10%;
     padding-top: 120px;
@@ -142,8 +142,6 @@ header {
     margin-right: 15px;
     width: 25px;
 }
-
-/* Formulario */
 .contact-form {
     flex: 1;
     min-width: 300px;

@@ -169,8 +169,6 @@ main {
     font-size: 0.8rem;
     margin-top: 4px;
 }
-
-/* Floating cards */
 .about-cards {
     position: relative;
     height: 380px;
