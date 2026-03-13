@@ -1,4 +1,3 @@
-/* --- Estilos Globales --- */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
 
 * {
@@ -21,7 +20,7 @@ body {
     padding: 0 5%;
 }
 
-/* --- NAVEGACIÓN --- */
+/* --- HEADER --- */
 header {
     background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
@@ -57,8 +56,6 @@ header {
     font-weight: 800;
     letter-spacing: -1px;
 }
-
-/* ELIMINAR EL CUADRADO BLANCO */
 .menu-toggle {
     display: none !important;
     visibility: hidden;
@@ -123,14 +120,13 @@ header {
 
 .see-all-link:hover { text-decoration: underline; color: #fff; }
 
-/* Grids responsivos */
+/* responsive */
 .artists-grid, .lanzamientos-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
     gap: 24px;
 }
 
-/* --- EFECTOS HOVER RESTAURADOS --- */
 .artist-card, .card {
     cursor: pointer;
     transition: background-color 0.3s ease; /* Efecto suave de fondo */
@@ -141,7 +137,7 @@ header {
     background-color: #181818; /* Fondo gris oscuro al pasar el cursor */
 }
 
-/* --- Artistas (Circulares) --- */
+/* --- Artistas --- */
 .artist-card { padding: 16px; text-align: center; }
 
 .artist-img-container {
@@ -157,7 +153,7 @@ header {
 .artist-name { font-size: 1rem; font-weight: 700; margin-bottom: 4px; }
 .artist-label { color: #b3b3b3; font-size: 0.85rem; }
 
-/* --- Lanzamientos (Cuadrados) --- */
+/* --- Lanzamientos --- */
 .card { padding: 16px; }
 
 .card-img {
@@ -193,12 +189,11 @@ header {
 .social-icons { display: flex; gap: 15px; }
 .social-icons a { color: #b3b3b3; font-size: 1.2rem; }
 
-/* CENTRADO DE LA LÍNEA FINAL SIN CUADROS */
 .footer-bottom {
     border-top: 1px solid #282828;
     padding-top: 20px;
     display: flex;
-    justify-content: center; /* Centra el contenido horizontalmente */
+    justify-content: center; 
     align-items: center;
     width: 100%;
 }
@@ -206,7 +201,7 @@ header {
 .footer-bottom p {
     color: #727272;
     font-size: 0.8rem;
-    text-align: center; /* Centra el texto */
+    text-align: center; 
     margin: 0;
 }
 
