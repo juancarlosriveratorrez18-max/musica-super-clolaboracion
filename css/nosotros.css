@@ -1,0 +1,188 @@
+/* --- Estilos Globales --- */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #121212;
+    color: #ffffff;
+    overflow-x: hidden;
+}
+
+/* --- NAVEGACIÓN (DISTRIBUCIÓN POR ESQUINAS) --- */
+header {
+    background-color: #000000;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #1f1f1f;
+}
+
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between; /* Empuja a los extremos */
+    align-items: center;
+    padding: 0 4%;
+}
+
+/* Logo a la izquierda */
+.nav-logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    min-width: 200px;
+}
+
+.logo-img { height: 35px; }
+.nav-text { color: #fff; font-size: 1.4rem; font-weight: 800; }
+
+/* Menú en el centro */
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.nav-link {
+    color: #b3b3b3;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    padding: 8px 16px;
+    border-radius: 20px;
+    transition: 0.3s;
+}
+
+.nav-link.active {
+    background-color: #282828;
+    color: #fff;
+}
+
+/* Botón a la derecha */
+.nav-actions {
+    min-width: 200px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.nav-login {
+    background-color: #ffffff;
+    color: #000;
+    padding: 10px 25px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+
+/* --- CUERPO DE LA PÁGINA --- */
+main {
+    margin-top: 100px;
+    padding-bottom: 50px;
+}
+
+.container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.section-title {
+    font-size: 2rem;
+    margin-bottom: 30px;
+    font-weight: 700;
+}
+
+/* --- GRID DE GÉNEROS (ESTILO SPOTIFY) --- */
+.lanzamientos-grid {
+    display: grid;
+    /* 3 columnas fijas para que se vea ordenado como en tu imagen */
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); 
+    gap: 20px;
+}
+
+.card {
+    height: 180px; /* Altura fija para que sean rectángulos */
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.card:hover { transform: scale(1.02); }
+
+/* Colores de fondo para las tarjetas (Simulando tu imagen) */
+.card:nth-child(1) { background-color: #e91e63; } /* Rosa */
+.card:nth-child(2) { background-color: #1e3264; } /* Azul oscuro */
+.card:nth-child(3) { background-color: #8d67ab; } /* Morado */
+.card:nth-child(4) { background-color: #1db954; } /* Verde */
+.card:nth-child(5) { background-color: #503750; } /* Gris/Vino */
+.card:nth-child(6) { background-color: #006450; } /* Verde oscuro */
+
+.card h4 {
+    font-size: 1.5rem;
+    font-weight: 800;
+    color: #fff;
+}
+
+.card p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.8);
+}
+
+/* La imagen flotante de la tarjeta */
+.card-img {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    bottom: -10px;
+    right: -10px;
+    transform: rotate(25deg); /* Efecto inclinado de Spotify */
+    background-size: cover;
+    background-position: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+}
+
+/* --- FOOTER --- */
+.main-footer {
+    background-color: #000;
+    padding: 50px 0 20px;
+    border-top: 1px solid #282828;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
+}
+
+.footer-section h4 { margin-bottom: 15px; font-size: 0.9rem; color: #fff; }
+.footer-section ul { list-style: none; }
+.footer-section a { color: #b3b3b3; text-decoration: none; font-size: 0.8rem; }
+
+.footer-bottom {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #1f1f1f;
+    color: #727272;
+    font-size: 0.8rem;
+}
+
+/* --- RESPONSIVE --- */
+@media (max-width: 768px) {
+    .nav-menu { display: none; }
+    .lanzamientos-grid { grid-template-columns: 1fr; }
+}
