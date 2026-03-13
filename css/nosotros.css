@@ -243,27 +243,6 @@ main {
 .card-b { top: 140px; right: 0; transform: rotate(1.5deg); }
 .card-c { bottom: 20px; left: 40px; transform: rotate(-1deg); }
 
-/* En móvil: las tarjetas dejan de ser absolutas y se apilan normalmente */
-@media (max-width: 900px) {
-    .about-cards {
-        position: static;
-        height: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 14px;
-    }
-
-    .floating-card {
-        position: static;
-        transform: none !important;
-        width: 100%;
-    }
-
-    .floating-card:hover {
-        transform: translateY(-4px) !important;
-    }
-}
-
 /* ---- MISIÓN Y VISIÓN ---- */
 .mv-section {
     padding: 100px 0;
@@ -529,6 +508,24 @@ main {
     .about-grid {
         grid-template-columns: 1fr;
         gap: 50px;
+    }
+
+    .about-cards {
+        position: static;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 14px;
+    }
+
+    .floating-card {
+        position: static;
+        transform: none !important;
+        width: 100%;
+    }
+
+    .floating-card:hover {
+        transform: translateY(-4px) !important;
     }
 
     .mv-grid {
