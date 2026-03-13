@@ -1,103 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
 /* 1. RESET Y CONFIGURACIÓN GLOBAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #121212; 
+    background-color: #121212;
     color: #fff;
     line-height: 1.6;
 }
-/* --- NAVEGACIÓN (DISTRIBUCIÓN POR ESQUINAS) --- */
+
+/*HEADER Y NAVBAR */
 header {
-    background-color: #000000;
+    background-color: rgba(0, 0, 0, 0.95);
     position: fixed;
-    top: 0;
     width: 100%;
+    top: 0;
     z-index: 1000;
-    height: 70px;
-    display: flex;
-    align-items: center;
-    border-bottom: 1px solid #1f1f1f;
+    border-bottom: 1px solid #282828;
 }
 
 .navbar {
     display: flex;
-    width: 100%;
-    justify-content: space-between; /* Empuja a los extremos */
+    justify-content: space-between;
     align-items: center;
-    padding: 0 4%;
+    padding: 12px 5%;
 }
 
-/* Logo a la izquierda */
 .nav-logo {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 12px;
     text-decoration: none;
-    min-width: 200px;
 }
 
-.logo-img { height: 35px; }
-.nav-text { color: #fff; font-size: 1.4rem; font-weight: 800; }
+.logo-img {
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 10px;
+}
 
-/* Menú en el centro */
+.nav-text {
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 30px;
+    gap: 15px;
 }
 
 .nav-link {
     color: #b3b3b3;
     text-decoration: none;
     font-weight: 600;
-    font-size: 0.9rem;
-    padding: 8px 16px;
-    border-radius: 20px;
+    padding: 8px 15px;
     transition: 0.3s;
+    border-radius: 20px;
 }
 
+.nav-link:hover,
 .nav-link.active {
-    background-color: #282828;
-    color: #fff;
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
 }
 
 .nav-actions {
-    min-width: 200px;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
 }
 
 .nav-login {
     background-color: #ffffff;
-    color: #000;
+    color: #000000;
     padding: 10px 25px;
-    border-radius: 50px;
-    text-decoration: none;
+    border-radius: 30px;
     font-weight: 700;
-    font-size: 0.9rem;
+    text-decoration: none;
+    transition: 0.3s;
 }
 
-/* 3. SECCIÓN DE CONTACTO (TU CÓDIGO ORIGINAL) */
+.nav-login:hover {
+    transform: scale(1.05);
+}
 
+/*SECCIÓN DE CONTACTO */
 .contact-section {
     padding: 60px 10%;
+    padding-top: 120px;
     text-align: center;
 }
 
 .contact-section h2 {
     font-size: 2.5rem;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .underline {
     width: 60px;
     height: 4px;
-    background: #3498db; /* Cambiado a azul para combinar con tus ajustes previos */
+    background: #ffffff;
     margin: 10px auto 40px;
 }
 
@@ -125,13 +137,11 @@ header {
 }
 
 .info-item i {
-    color: #3498db; /* Azul */
+    color: #ffffff;
     font-size: 1.2rem;
     margin-right: 15px;
     width: 25px;
 }
-
-/* Formulario */
 .contact-form {
     flex: 1;
     min-width: 300px;
@@ -140,7 +150,7 @@ header {
     gap: 15px;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 15px;
@@ -156,17 +166,18 @@ header {
     resize: none;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #3498db;
+    border-color: #ffffff;
 }
 
 .btn-submit {
-    background: #3498db; /* Azul */
-    color: white;
+    background: #ffffff;
+    color: #000000;
     border: none;
     padding: 15px;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 5px;
@@ -174,5 +185,16 @@ header {
 }
 
 .btn-submit:hover {
-    background: #2980b9;
+    background: #b3b3b3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
 }
