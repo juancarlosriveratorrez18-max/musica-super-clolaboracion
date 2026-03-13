@@ -3,92 +3,156 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/index.css">
+    <title>MUSICA | Nosotros</title>
+    <link rel="stylesheet" href="css/nosotros.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <title>MUSICA | Géneros</title>
 </head>
 <body>
+
     <header>
-        <nav class="navbar container">
+        <nav class="navbar">
             <a href="index.html" class="nav-logo">
                 <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2023/05/Spotify_Primary_Logo_RGB_White.png" alt="Logo" class="logo-img">
                 <h2 class="nav-text">MUSICA</h2>
             </a>
-            
-            <input type="checkbox" id="menu-toggle" class="menu-toggle">
-            
+
             <ul class="nav-menu">
-                <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
-                <li class="nav-item"><a href="generos.html" class="nav-link active">Géneros</a></li>
-                <li class="nav-item"><a href="nosotros.html" class="nav-link">Nosotros</a></li>
-                <li class="nav-item"><a href="contacto.html" class="nav-link">Contacto</a></li>
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="generos.html" class="nav-link">Géneros</a></li>
+                <li><a href="nosotros.html" class="nav-link active">Nosotros</a></li>
+                <li><a href="contacto.html" class="nav-link">Contacto</a></li>
             </ul>
 
             <div class="nav-actions">
                 <a href="login.html" class="nav-login">Iniciar sesión</a>
-                <label for="menu-toggle" class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </label>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="explorar-generos" class="artists-section">
+
+        <!-- QUÉ SOMOS -->
+        <section class="about-section">
             <div class="container">
-                <div class="section-header">
-                    <h2 class="section-title">Explorar todo</h2>
-                </div>
-                
-                <div class="lanzamientos-grid">
-                    
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('https://www.santandersmusic.com/media/magazine/16487502178773-lg.webp');"></div>
-                        <h4>Reggaetón</h4>
-                        <p>Los ritmos más calientes.</p>
+                <div class="about-grid">
+                    <div class="about-text">
+                        <span class="section-tag">¿Qué somos?</span>
+                        <h2>Una plataforma hecha <br>por amantes de la música</h2>
+                        <p>MUSICA nació como un proyecto formativo del SENA con una idea simple: crear un lugar donde cualquier persona pueda explorar el universo musical sin límites. Desde los ritmos urbanos del reggaetón hasta los clásicos que nunca mueren, aquí encontrarás todo en un solo lugar.</p>
+                        <p>Nuestra plataforma ofrece una experiencia intuitiva y visualmente atractiva que pone al artista y sus canciones en el centro de todo.</p>
+                        <div class="stats-row">
+                            <div class="stat">
+                                <span class="stat-num">6+</span>
+                                <span class="stat-label">Géneros musicales</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-num">20+</span>
+                                <span class="stat-label">Artistas destacados</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-num">2</span>
+                                <span class="stat-label">Desarrolladores</span>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('https://codiscos-web-prd-files.panterweb.co/thumbs/b8cfc77d-f5fc-4134-afcb-8e35119e5d82.jpeg');"></div>
-                        <h4>Trap</h4>
-                        <p>Bajos profundos y calle.</p>
+                    <div class="about-cards">
+                        <div class="floating-card card-a">
+                            <i class="fas fa-headphones-alt"></i>
+                            <p>Escucha sin interrupciones</p>
+                        </div>
+                        <div class="floating-card card-b">
+                            <i class="fas fa-compact-disc"></i>
+                            <p>Álbumes y singles</p>
+                        </div>
+                        <div class="floating-card card-c">
+                            <i class="fas fa-star"></i>
+                            <p>Artistas del momento</p>
+                        </div>
                     </div>
-
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('https://media.glamour.mx/photos/65c55c49e355dff08078f8cf/1:1/w_1998,h_1998,c_limit/karol-g-datos-curiosos.jpg');"></div>
-                        <h4>Pop Urbano</h4>
-                        <p>Melodías modernas.</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('https://cdn-p.smehost.net/sites/5b3bac59eb36401694af3a241173447f/wp-content/uploads/2022/04/Vicente-Ferna%CC%81ndez-4.jpg');"></div>
-                        <h4>Clásicos</h4>
-                        <p>Los hits de siempre.</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('https://revistaiconica.com/wp-content/uploads/2018/11/Bohemian-Rhapsody.jpg');"></div>
-                        <h4>Rock</h4>
-                        <p>Energía pura.</p>
-                    </div>
-
-                    <div class="card">
-                        <div class="card-img" style="background-image: url('https://imagenes.elpais.com/resizer/v2/LMESRBCYK45MKXKUULHHVVS6QQ.jpg?auth=e8bc9db6faea8c7d7846debe47472b93ef7aebf55ff24fca81c3ca57ac9e740e&width=414');"></div>
-                        <h4>Hip Hop</h4>
-                        <p>Cultura global.</p>
-                    </div>
-
                 </div>
             </div>
         </section>
+
+        <!-- MISIÓN Y VISIÓN -->
+        <section class="mv-section">
+            <div class="container">
+                <div class="mv-grid">
+                    <div class="mv-card mission">
+                        <div class="mv-icon">
+                            <i class="fas fa-bullseye"></i>
+                        </div>
+                        <h3>Nuestra Misión</h3>
+                        <p>Democratizar el acceso a la música, brindando a cada usuario una experiencia personalizada y envolvente que lo conecte con los artistas y géneros que más le apasionan. Queremos ser el puente entre el oyente y la cultura musical latinoamericana y global.</p>
+                    </div>
+                    <div class="mv-divider"></div>
+                    <div class="mv-card vision">
+                        <div class="mv-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <h3>Nuestra Visión</h3>
+                        <p>Convertirnos en la plataforma de referencia musical en habla hispana, reconocida por su diseño innovador, su contenido de calidad y su compromiso con los artistas emergentes. Soñamos con un mundo donde la música sea el centro de cada comunidad digital.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- EQUIPO -->
+        <section class="team-section">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-tag">Las personas detrás</span>
+                    <h2 class="section-title">Nuestro equipo</h2>
+                    <p class="section-subtitle">Estudiantes del SENA apasionados por el desarrollo web y la música.</p>
+                </div>
+
+                <div class="team-grid">
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">
+                                <img src="img/juan_carlos.jpeg" alt="Juan Carlos Rivera">
+                            </div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="team-info">
+                            <h4>Juan Carlos Rivera</h4>
+                            <span class="team-role">Desarrollador Frontend</span>
+                            <p class="team-desc">Apasionado por el diseño UI/UX y la creación de experiencias digitales memorables.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="team-card">
+                        <div class="team-avatar">
+                            <div class="avatar-placeholder">
+                                <img src="img/jhon_anderson.jpeg" alt="Jhon Anderson Marroquin">
+                            </div>
+                            <div class="avatar-glow"></div>
+                        </div>
+                        <div class="team-info">
+                            <h4>Jhon Anderson Marroquin</h4>
+                            <span class="team-role">Desarrollador Frontend</span>
+                            <p class="team-desc">Entusiasta del código limpio y las interfaces que hacen la diferencia en la experiencia del usuario.</p>
+                            <div class="team-social">
+                                <a href="#"><i class="fa-brands fa-github"></i></a>
+                                <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                                <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <footer class="main-footer">
         <div class="container footer-content">
             <div class="footer-section about">
-                <p>Juan Carlos Rivera.<br>Jhon anderson Marroquin.</p>
+                <p>Juan Carlos Rivera.<br>Jhon Anderson Marroquin.</p>
             </div>
             <div class="footer-section links">
                 <h4>Explorar</h4>
@@ -112,5 +176,6 @@
             <p>© 2026 MUSICA | Proyecto Formativo SENA | Todos los derechos reservados.</p>
         </div>
     </footer>
+
 </body>
 </html>

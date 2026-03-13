@@ -1,103 +1,115 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800&display=swap');
+
 /* 1. RESET Y CONFIGURACIÓN GLOBAL */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
-    background-color: #121212; 
+    background-color: #121212;
     color: #fff;
     line-height: 1.6;
 }
 
-/* 2. NUEVO ENCABEZADO (ESTILO SPOTIFY) */
-/* Ponlo aquí para que controle la parte superior de la página */
+/* 2. HEADER Y NAVBAR */
+header {
+    background-color: rgba(0, 0, 0, 0.95);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    border-bottom: 1px solid #282828;
+}
+
 .navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
-    background-color: #000000;
-    font-family: 'Circular', sans-serif; 
+    padding: 12px 5%;
 }
 
-.nav-left .nav-logo {
+.nav-logo {
     display: flex;
     align-items: center;
+    gap: 12px;
     text-decoration: none;
-    gap: 10px;
 }
 
 .logo-img {
-    width: 32px; 
+    height: 45px;
+    width: 45px;
+    object-fit: cover;
+    border-radius: 10px;
 }
 
 .nav-text {
-    color: white;
-    font-size: 1.2rem;
-    font-weight: bold;
+    color: #ffffff;
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
 .nav-menu {
     display: flex;
     list-style: none;
-    gap: 20px;
-    background-color: rgba(255, 255, 255, 0.1); 
-    padding: 8px 20px;
-    border-radius: 30px;
+    gap: 15px;
 }
 
 .nav-link {
-    text-decoration: none;
     color: #b3b3b3;
-    font-size: 0.9rem;
-    font-weight: bold;
-    padding: 5px 10px;
-    transition: 0.3s;
-}
-
-.nav-link:hover {
-    color: white;
-}
-
-.nav-link.active {
-    color: white;
-    background-color: #333; 
-    border-radius: 15px;
-}
-
-.btn-login {
-    background-color: white;
-    color: black;
     text-decoration: none;
+    font-weight: 600;
+    padding: 8px 15px;
+    transition: 0.3s;
+    border-radius: 20px;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+.nav-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-login {
+    background-color: #ffffff;
+    color: #000000;
     padding: 10px 25px;
-    border-radius: 25px;
-    font-weight: bold;
-    font-size: 0.9rem;
+    border-radius: 30px;
+    font-weight: 700;
+    text-decoration: none;
     transition: 0.3s;
 }
 
-.btn-login:hover {
+.nav-login:hover {
     transform: scale(1.05);
 }
 
-/* 3. SECCIÓN DE CONTACTO (TU CÓDIGO ORIGINAL) */
+/* 3. SECCIÓN DE CONTACTO */
 .contact-section {
     padding: 60px 10%;
+    padding-top: 120px;
     text-align: center;
 }
 
 .contact-section h2 {
     font-size: 2.5rem;
+    font-weight: 700;
     text-transform: uppercase;
 }
 
 .underline {
     width: 60px;
     height: 4px;
-    background: #3498db; /* Cambiado a azul para combinar con tus ajustes previos */
+    background: #ffffff;
     margin: 10px auto 40px;
 }
 
@@ -125,7 +137,7 @@ body {
 }
 
 .info-item i {
-    color: #3498db; /* Azul */
+    color: #ffffff;
     font-size: 1.2rem;
     margin-right: 15px;
     width: 25px;
@@ -140,7 +152,7 @@ body {
     gap: 15px;
 }
 
-.contact-form input, 
+.contact-form input,
 .contact-form textarea {
     width: 100%;
     padding: 15px;
@@ -156,17 +168,18 @@ body {
     resize: none;
 }
 
-.contact-form input:focus, 
+.contact-form input:focus,
 .contact-form textarea:focus {
-    border-color: #3498db;
+    border-color: #ffffff;
 }
 
 .btn-submit {
-    background: #3498db; /* Azul */
-    color: white;
+    background: #ffffff;
+    color: #000000;
     border: none;
     padding: 15px;
     font-weight: bold;
+    font-family: 'Poppins', sans-serif;
     text-transform: uppercase;
     cursor: pointer;
     border-radius: 5px;
@@ -174,5 +187,16 @@ body {
 }
 
 .btn-submit:hover {
-    background: #2980b9;
+    background: #b3b3b3;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .nav-menu {
+        display: none;
+    }
+
+    .flex-container {
+        flex-direction: column;
+    }
 }
